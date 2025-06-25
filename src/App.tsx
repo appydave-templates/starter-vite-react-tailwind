@@ -1,10 +1,19 @@
+import { ThemeProvider } from './components/theme/ThemeProvider'
+import { Header } from './components/layout/Header'
+import { Footer } from './components/layout/Footer'
+import { ExamplePage } from './pages/ExamplePage'
+
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100">
-      <h1 className="text-3xl font-bold text-center py-8">
-        Vite + React + TypeScript + Tailwind
-      </h1>
-    </div>
+    <ThemeProvider>
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-grow">
+          <ExamplePage />
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
   )
 }
 
