@@ -45,6 +45,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   // Initialize theme on mount
   useEffect(() => {
     setTheme(theme)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   // Listen for system theme changes when no saved preference
